@@ -1,0 +1,22 @@
+---
+title: "Sleep_test"
+author: "Yingfei Jiang"
+date: "11/6/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+sleep <- read_csv("sleep.csv")
+
+graph_sleep <- ggplot(sleep, aes(x = total_sleep, y = life_span))+
+  geom_point()
+
+graph_sleep
+
+```
+
